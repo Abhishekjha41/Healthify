@@ -30,7 +30,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ onClose }) => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/chat', {
+      const response = await axios.post('https://healthify-server.vercel.app/api/chat', {
         message: userMessage
       });
 

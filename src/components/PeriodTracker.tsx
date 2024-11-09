@@ -16,7 +16,7 @@ const PeriodTracker: React.FC = () => {
     setNextPeriodDate(''); // Clear previous result
 
     try {
-      const response = await axios.post('http://localhost:5000/api/period-tracker', { lastPeriodDate, cycleLength });
+      const response = await axios.post('https://healthify-server.vercel.app/api/period-tracker', { lastPeriodDate, cycleLength });
       setNextPeriodDate(response.data.nextPeriodDate);
     } catch (error) {
       setNextPeriodDate('Unable to calculate your next period. Please try again.');

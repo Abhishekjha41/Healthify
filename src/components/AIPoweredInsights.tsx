@@ -15,7 +15,7 @@ const AIInsights: React.FC = () => {
     setInsights(''); // Clear previous results
 
     try {
-      const response = await axios.post('http://localhost:5000/api/ai-powered-insights', { healthQuery: query });
+      const response = await axios.post('https://healthify-server.vercel.app/api/ai-powered-insights', { healthQuery: query });
       setInsights(response.data.insights);
     } catch (error) {
       setInsights('An error occurred while fetching insights. Please try again.');
